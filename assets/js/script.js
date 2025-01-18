@@ -39,6 +39,12 @@ $(".header__burger").on("click", function() {
     $("html, body").animate ({
       scrollTop: blockOffset - 120
     }, 1000);
+
+    if ($(window).width() <= 1220) {
+      $(".header__burger").removeClass("active");
+      $(".header__menu").slideUp();
+      $('body').removeClass("hidden");
+    };
   });
 /*=========/smooth scroll=============*/
 
