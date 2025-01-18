@@ -1003,7 +1003,8 @@ body.hidden {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    text-align: right; }
+    text-align: right;
+    margin-top: -40px; }
     .conditions__photo img {
       max-width: 100%; }
   .conditions .title, .conditions .title-small {
@@ -1287,6 +1288,7 @@ body.hidden {
   .conditions__inner {
     display: block; }
   .conditions__photo {
+    margin-top: 0;
     width: 100%;
     max-width: 100%;
     justify-content: center; }
@@ -1360,6 +1362,8 @@ body.hidden {
       width: 100%; }
   .about__box {
     background-position: bottom left; }
+  .about .text {
+    padding-bottom: 0; }
   .contact__item {
     width: 100%; }
   .application__info {

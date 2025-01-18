@@ -787,6 +787,7 @@ body.hidden {
 		align-items: flex-end;
 		justify-content: flex-end;
 		text-align: right;
+		margin-top: -40px;
 		img {
 			max-width: 100%;
 		}
@@ -1162,6 +1163,7 @@ body.hidden {
 			display: block;
 		}
 		&__photo {
+			margin-top: 0;
 			width: 100%;
 			max-width: 100%;
 			justify-content: center;
@@ -1287,6 +1289,9 @@ body.hidden {
 	.about {
 		&__box {
 			background-position: bottom left;
+		}
+		.text {
+			padding-bottom: 0;
 		}
 	}
 
