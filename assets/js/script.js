@@ -28,6 +28,20 @@ $(".header__burger").on("click", function() {
 });
 /*=========/menu==============*/
 
+/*=========Smooth scroll=============*/
+  $("[data-scroll]").on("click", function(event) {
+  event.preventDefault();
+ 
+      blockID = $(this).data('scroll');
+     
+      blockOffset = $('#'+blockID).offset().top;
+ 
+    $("html, body").animate ({
+      scrollTop: blockOffset - 120
+    }, 1000);
+  });
+/*=========/smooth scroll=============*/
+
 /*============Range=============*/
  $( "#range_calc-price" ).slider({
       range:'min',

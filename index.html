@@ -29,11 +29,11 @@
 					</a>
 					<div class="header__menu">
 						<div class="header__nav">
-							<a href="#" class="header__link">О компании</a>
-							<a href="#" class="header__link">Условия</a>
-							<a href="#" class="header__link">Требования</a>
-							<a href="#" class="header__link">Документы</a>
-							<a href="#" class="header__link">Контакты</a>
+							<a href="#" class="header__link" data-scroll="about">О компании</a>
+							<a href="#" class="header__link" data-scroll="conditions">Условия</a>
+							<a href="#" class="header__link" data-scroll="requirements">Требования</a>
+							<a href="#" class="header__link" data-scroll="documents">Документы</a>
+							<a href="#" class="header__link" data-scroll="contact">Контакты</a>
 						</div>
 						<div class="header__contact">
 							<div class="social">
@@ -50,7 +50,7 @@
 							</div><!--/social-->
 							<div class="header__phone">
 								<a class="header__phone-num" href="tel:88003009259">8 800 300-92-59</a>
-								<a class="header__phone-call" href="#">Заказать звонок</a>
+								<a class="header__phone-call" href="#" data-scroll="loan">Заказать звонок</a>
 							</div>
 						</div>
 					</div>
@@ -61,7 +61,7 @@
 			</div>
 		</header><!--/header-->
 		<main class="main">
-			<section class="loan section">
+			<section class="loan section" id="loan">
 				<div class="container">
 					<div class="loan__inner">
 						<div class="loan__calc calc">
@@ -209,7 +209,7 @@
 						</div>
 					</div>
 				</section><!--/steps-->
-				<section class="documents">
+				<section class="documents" id="documents">
 					<div class="container">
 						<div class="documents__box">
 							<div class="documents__info">
@@ -225,7 +225,7 @@
 									<img src="assets/images/exclamation-icon.svg" alt="">
 									<span><span class="bold">Без переоформления собственности:</span> вы остаетесь владельцем ТС</span>
 								</div>
-								<a href="#" class="btn">Оформить онлайн</a>
+								<a href="#" class="btn" data-scroll="loan">Оформить онлайн</a>
 							</div>
 							<div class="documents__photo">
 								<img src="assets/images/arrow-logo.svg" alt="">
@@ -234,7 +234,7 @@
 					</div>
 				</section><!--/documents-->
 			</div><!--/blue-box-->
-			<section class="requirements section">
+			<section class="requirements section" id="requirements">
 				<div class="container">
 					<h2 class="title title_wh">ТРЕБОВАНИЯ</h2>
 					<div class="requirements__inner">
@@ -310,7 +310,7 @@
 					</div>
 				</div>
 			</section><!--/requirements-->
-			<section class="about section">
+			<section class="about section" id="about">
 				<div class="container">
 					<div class="about__box">
 						<h2 class="title">О КОМПАНИИ</h2>
@@ -322,7 +322,7 @@
 					</div>
 				</div>
 			</section><!--/about-->
-			<section class="conditions section">
+			<section class="conditions section" id="conditions">
 				<div class="container">
 					<div class="conditions__box">
 						<div class="conditions__inner">
@@ -379,13 +379,13 @@
 								</div>
 							</div>
 							<div class="conditions__btn">
-								<a href="#" class="btn btn_blue">Хочу оформить заем</a>
+								<a href="#" class="btn btn_blue" data-scroll="loan">Хочу оформить заем</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section><!--/conditions-->
-			<section class="contact section">
+			<section class="contact section" id="contact">
 				<div class="container">
 					<h2 class="title title_wh">КОНТАКТЫ</h2>
 					<div class="contact__inner">
@@ -437,7 +437,7 @@
 						<div class="application__info">
 							<h2 class="title title_wh">ОТПРАВЬТЕ ЗАЯВКУ НА ОФОРМЛЕНИЕ ЗАЙМА</h2>
 							<div class="text text_wh">Заполните форму, и мы свяжемся с Вами в течение 5 минут</div>
-							<a href="#" class="btn btn_wh">Оставить заявку</a>
+							<a href="#" class="btn btn_wh" data-scroll="loan">Оставить заявку</a>
 						</div>
 						<div class="application__photo">
 							<img src="assets/images/woman.png" alt="">
