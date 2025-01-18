@@ -1,0 +1,24 @@
+$ff: 'Open Sans', sans-serif;
+$ffm: 'Montserrat', sans-serif;
+$lh: 1.25;
+$wh: #ffffff;
+$bl: rgb(29, 29, 27);
+$blue: rgb(29, 58, 68);
+$lblue: rgb(17, 64, 80);
+$red: rgb(183, 25, 35);
+$lgray: rgb(211, 210, 210);
+
+@mixin text {
+	font-family: $ff;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.4;
+	color: $bl;
+}
+
+$maxWidth: 1920;
+@mixin adaptive-font($pcSize, $mobSize) {
+ $addSize: $pcSize - $mobSize;
+ $maxWidth: $maxWidth - 320;
+ font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
