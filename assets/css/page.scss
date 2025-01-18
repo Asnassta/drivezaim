@@ -248,7 +248,7 @@
 	.footer {
 		&__logo {
 			img {
-				width: 100px;
+				width: 170px;
 			}
 		}
 	}
@@ -330,6 +330,33 @@
 		&__col {
 			width: 100%;
 			margin-left: 0;
+		}
+	}
+}
+
+@media(max-width: 540px) {
+	.footer {
+		&__menu {
+			margin-bottom: 20px;
+			flex-direction: column;
+			justify-content: center;
+		}
+		&__logo {
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+		&__contact {
+			display: block;
+			text-align: center;
+		}
+		&__phone {
+			margin-top: 20px;
+			margin-left: 0;
+		}
+		&__text {
+			&_center {
+				text-align: center;
+			}
 		}
 	}
 }
