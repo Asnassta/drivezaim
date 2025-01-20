@@ -53,11 +53,29 @@ $(".header__burger").on("click", function() {
       range:'min',
       min: 10000,
       max: 500000,
+      step: 5000,
       value: 200000,
       slide: function( event, ui ) {
-        $('#calc-price').val(ui.value);
+        $('#calc-price').val(ui.value.toLocaleString('ru-RU', { minimumFractionDigits: 0, maximumFractionDigits: 0 }).replace(/,/g, ' '));
        }
     });
+
+    $('#calc-price').on('change', function() {
+        var newValue = $(this).val().replace(/[^0-9]/g, '');
+        if (newValue === '') {
+            $(this).val('');
+            $("#range_calc-price").slider("value", 10000);
+        } else {
+            newValue = Math.max(10000, Math.min(500000, newValue));
+             newValue = Math.round(newValue / 5000) * 5000;
+            $(this).val(newValue.toLocaleString('ru-RU', { minimumFractionDigits: 0, maximumFractionDigits: 0 }).replace(/,/g, ' '));
+            $("#range_calc-price").slider("value", newValue);
+        }
+    });
+    $('#calc-price').on('input', function() {
+        $(this).val($(this).val().replace(/[^0-9]/g, ''));
+    });
+    
 
     $( "#range_calc-period" ).slider({
       range:'min',
@@ -67,6 +85,21 @@ $(".header__burger").on("click", function() {
       slide: function( event, ui ) {
         $('#calc-period').val(ui.value);
        }
+    });
+
+    $('#calc-period').on('change', function() {
+        var newValue = $(this).val().replace(/[^0-9]/g, '');
+        if (newValue === '') {
+            $(this).val('');
+            $("#range_calc-price").slider("value", 10000);
+        } else {
+            newValue = Math.max(1, Math.min(36, newValue));
+            $(this).val(newValue);
+            $("#range_calc-period").slider("value", newValue);
+        }
+    });
+    $('#calc-period').on('input', function() {
+        $(this).val($(this).val().replace(/[^0-9]/g, ''));
     });
 /*===========/range=============*/
 
